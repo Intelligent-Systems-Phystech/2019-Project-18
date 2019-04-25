@@ -22,12 +22,12 @@ def normalize_data(X_train, X_test, Y_train, Y_test):
     return X_train, X_test, Y_train, Y_test
 
 def load_data():
-    assert os.path.exists('../data/ECoG_X_test.mat'), 'Data directory should contain train and test mats'
+    assert os.path.exists('../../data/ECoG_X_test.mat'), 'Data directory should contain train and test mats'
 
-    X_train = loadmat('../data/ECoG_X_train.mat')
-    X_test = loadmat('../data/ECoG_X_test.mat')
-    Y_train = loadmat('../data/ECoG_Y_train.mat')
-    Y_test = loadmat('../data/ECoG_Y_test.mat')
+    X_train = loadmat('../../data/ECoG_X_train.mat')
+    X_test = loadmat('../../data/ECoG_X_test.mat')
+    Y_train = loadmat('../../data/ECoG_Y_train.mat')
+    Y_test = loadmat('../../data/ECoG_Y_test.mat')
 
     X_train, X_test, Y_train, Y_test = X_train['X_train'], X_test['X_hold_out'],\
                                          Y_train['Y_train'], Y_test['Y_hold_out']
